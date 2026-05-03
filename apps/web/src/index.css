@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.tile {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.tile-empty { background-color: #f0f0f0; }
+.tile-path { background-color: #d4a373; }
+.tile-chalet { background-color: #8b4513; color: white; }
+.tile-pool { background-color: #00bfff; }
+.tile-cabana { background-color: #90ee90; }
+.tile-cabana.booked { background-color: #ff6b6b; cursor: not-allowed; }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  min-width: 300px;
+}
+
+.modal-content h2 {
+  margin-bottom: 16px;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-content input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-content button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content .btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.modal-content .btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.modal-content .error {
+  color: #dc3545;
+  font-size: 14px;
+}
+
+.modal-content .success {
+  color: #28a745;
+  font-size: 14px;
+}
+
+.legend {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  color: white;
+}
+
+.toast-success { background-color: #28a745; }
+.toast-error { background-color: #dc3545; }
